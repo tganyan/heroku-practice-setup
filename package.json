@@ -7,9 +7,15 @@
     "lib": "lib",
     "test": "test"
   },
+  "engines": {
+    "node": "10.6.0"
+  },
   "scripts": {
     "test": "jest --coverage --forceExit --runInBand",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "dbOn": "mkdir db && mongod --dbpath=db",
+    "dbOff": "killall mongod",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +32,17 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.22.0",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "faker": "^4.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "http-errors": "^1.7.1",
+    "mongoose": "^5.3.0",
+    "superagent": "^4.0.0-beta.5",
+    "uuid": "^3.3.2",
+    "winston": "^3.1.0"
   }
 }
